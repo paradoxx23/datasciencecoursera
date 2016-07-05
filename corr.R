@@ -10,8 +10,6 @@ corr <- function(directory, thresold = 0) {
     file_clean <- file[complete.cases(file),]
     corr <- cor(file_clean$sulfate, file_clean$nitrate)
     dat <- rbind(dat,corr)
-    
-    ##dat <- unlist(dat[1,])
 
   }
   c(t(dat))
